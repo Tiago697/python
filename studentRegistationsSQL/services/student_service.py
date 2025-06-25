@@ -7,8 +7,11 @@ def create_record(name, email, age):
     if age >= 130:
         print ('erro idade iconpleta')
         return
-    if age < 10:
-        print ('aceitamos matriclas apenas apenas para maior de 10 anos')
+    if age < 18:
+        print (f'sua idade é {age} aceitamos matriculas  apenas para maior de 18 anos, tente novamente mais tarde :(')
         return
     
     dao.insert_student(student)
+
+def display_record():
+    return dao.get_all_students()

@@ -5,11 +5,11 @@ C:\Users\Fraiburgo\Desktop\LAB\studentRegistationsSQL\resources
     Backend:           
         resources/      # recursos nececessarios para o projeto ex: imagens
         models/         #contem as classees/representacao das entidades
-        sevicos/        #contem as regras
-        db/             #
-        controlers/     #
+        sevicos/        #contem as regras de negocio
+        db/             #conexao com banco de dados
+        controlers/     #receber comandos ou botoes
     FrontEnd            #
-        ui/             #
+        ui/             #Interface
 
 
 C:\Users\Fraiburgo\Desktop\LAB\studentRegistationsSQL

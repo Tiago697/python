@@ -9,6 +9,13 @@ from db.connection import createTable
 import services.student_service as service
 
 
+def show_students():
+    students = service.display_record()
+    for student in students:
+        print (f"{student.id} - {student.name} - {student.email} - {student.age}")
+
+
+
 def mainMenu() -> str:
     print("\nSistema de Cadastro de Alunos")
     print("1. Cadastrar Aluno")
@@ -32,6 +39,15 @@ if __name__ == "__main__":
             email = input("Email do aluno: ")
             age = int(input("Idade do aluno: "))
             service.create_record(name, email, age)
+            show_students()
+        
+        
+        elif opcao == "2":
+            show_students()
+
+            
+
+
             
         if opcao == "5":
             break
