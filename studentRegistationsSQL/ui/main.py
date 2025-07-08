@@ -1,11 +1,19 @@
 import sys
 import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+import services.student_service as service
+from models.student import Student
+
 PROJECT_DIR = "C:\\Users\\Fraiburgo\\Desktop\\LAB\\studentRegistationsSQL\\"
-sys.path.append(os.path.abspath(PROJECT_DIR))
 
-
-
-# ... código anterior mantido ...
+def mainMenu():
+    print("\n===== MENU =====")
+    print("1. Cadastrar Aluno")
+    print("2. Listar Alunos")
+    print("3. Atualizar Aluno")
+    print("4. Deletar Aluno")
+    print("5. Sair")
+    return input("Escolha uma opção: ")
 
 def show_students():
     students = service.display_record()
@@ -13,7 +21,7 @@ def show_students():
         print(f"{student.id} - {student.name} - {student.email} - {student.age}")
 
 if __name__ == "__main__":
-    createTable()
+    service.create_table()
 
     while True:
         opcao = mainMenu()
@@ -42,6 +50,7 @@ if __name__ == "__main__":
             show_students()
 
         elif opcao == "5":
+            print("Encerrando o programa.")
             break
 
         else:

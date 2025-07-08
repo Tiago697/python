@@ -34,14 +34,3 @@ def get_cursor():
    
     finally:
         conexao.close()
-
-def createTable():
-    with get_cursor() as cursor:
-        cursor.execute("""
-        CREATE TABLE IF NOT EXISTS aluno (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            nome TEXT NOT NULL,
-            email TEXT NOT NULL UNIQUE,
-            idade INTEGER
-        )
-    """)
