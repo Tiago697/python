@@ -1,0 +1,43 @@
+#Estrutura do projeto
+
+C:\Users\Fraiburgo\Desktop\LAB\studentRegistationsSQL\resources
+
+    Backend:           
+        resources/      # recursos nececessarios para o projeto ex: imagens
+        models/         #contem as classees/representacao das entidades
+        sevicos/        #contem as regras de negocio
+        db/             #conexao com banco de dados
+        controlers/     #receber comandos ou botoes
+    FrontEnd            #
+        ui/             #Interface
+
+
+C:\Users\Fraiburgo\Desktop\LAB\studentRegistationsSQL
+
+├── resources\                     # Recursos estáticos usados pelo projeto
+│
+├── Backend\
+│   ├── db\                        # Scripts de criação e conexão com o banco de dados
+│   │   └── connection.py         # Exemplo: conexão com SQLite ou outro banco
+│   │
+│   ├── models\                   # Modelos das entidades (ex: Aluno, Curso)
+│   │   └── student.py           # Exemplo: classe Student com seus atributos
+│   │
+│   ├── services\                 # Lógica de negócio e regras da aplicação
+│   │   └── student_service.py   # Exemplo: funções como cadastrar_aluno()
+│   │
+│   ├── controllers\             # Controladores (interface entre o frontend e o backend)
+│   │   └── student_controller.py# Exemplo: recebe requisição e chama o service
+│   │
+│   └── resources\               # Imagens, arquivos JSON, ou outros usados no backend
+│       └── logo.png             # Exemplo
+│
+├── FrontEnd\
+│   ├── ui\                       # Interface com o usuário (HTML, CSS, JS, React, etc.)
+│   │   ├── index.html           # Página principal
+│   │   └── style.css            # Estilo visual
+│   │
+│   └── assets\                  # Imagens, ícones e arquivos usados na UI
+│       └── banner.jpg           # Exemplo
+│
+└── README.md                    # Instruções sobre o projeto
